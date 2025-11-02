@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj": {}
+    "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj": {
+    "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj",
+        "projectUniqueName": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj",
+        "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\obj\\",
+        "outputPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "F:\\SDK VS Community 2022\\NuGetPackages"
@@ -30,11 +30,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj"
+              "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Persistence\\Persistence.csproj": {
-                "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Persistence\\Persistence.csproj"
+              "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Persistence\\Persistence.csproj": {
+                "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -96,14 +96,14 @@
         }
       }
     },
-    "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
+    "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj",
+        "projectUniqueName": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj",
+        "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\obj\\",
+        "outputPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "F:\\SDK VS Community 2022\\NuGetPackages"
@@ -165,14 +165,14 @@
         }
       }
     },
-    "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Persistence\\Persistence.csproj": {
+    "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Persistence\\Persistence.csproj",
+        "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Persistence\\obj\\",
+        "outputPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "F:\\SDK VS Community 2022\\NuGetPackages"
@@ -191,8 +191,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj"
+              "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj"
               }
             }
           }

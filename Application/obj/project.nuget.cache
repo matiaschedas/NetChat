@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iHetYpWEQ4s=",
+  "dgSpecHash": "qGcf0tkZtKk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj",
+  "projectFilePath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\matia\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\matia\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
@@ -140,10 +140,10 @@
     {
       "code": "NU1902",
       "level": "Warning",
-      "message": "El paquete \"System.IdentityModel.Tokens.Jwt\" 6.8.0 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
-      "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj",
+      "message": "Package 'System.IdentityModel.Tokens.Jwt' 6.8.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
+      "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj",
+      "filePath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj",
       "libraryId": "System.IdentityModel.Tokens.Jwt",
       "targetGraphs": [
         "net5.0"

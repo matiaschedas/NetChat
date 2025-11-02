@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iwuFCzpdi6A=",
+  "dgSpecHash": "qxT56zZyW0E=",
   "success": true,
-  "projectFilePath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\api\\API.csproj",
+  "projectFilePath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\matia\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\matia\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
@@ -151,10 +151,10 @@
     {
       "code": "NU1902",
       "level": "Warning",
-      "message": "El paquete \"Microsoft.AspNetCore.Authentication.JwtBearer\" 5.0.1 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-q7cg-43mg-qp69",
-      "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\api\\API.csproj",
+      "message": "Package 'Microsoft.AspNetCore.Authentication.JwtBearer' 5.0.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-q7cg-43mg-qp69",
+      "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\API\\API.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\api\\API.csproj",
+      "filePath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\API\\API.csproj",
       "libraryId": "Microsoft.AspNetCore.Authentication.JwtBearer",
       "targetGraphs": [
         "net5.0"

@@ -49,7 +49,7 @@ export default class CommonStore{
   @action createHubConnection = async () => {
     if(this.hubConnection) return;
     this.hubConnection = new HubConnectionBuilder()
-    .withUrl('http://localhost:5000/chat', {
+    .withUrl('https://netchat-xv5f.onrender.com/chat', {
       accessTokenFactory: () => this.rootStore.commonStore.token!
     })
     .configureLogging(LogLevel.Information)

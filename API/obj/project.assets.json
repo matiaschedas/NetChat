@@ -7410,11 +7410,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\api\\API.csproj",
+      "projectUniqueName": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\api\\API.csproj",
+      "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\API\\API.csproj",
       "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\api\\obj\\",
+      "outputPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "F:\\SDK VS Community 2022\\NuGetPackages"
@@ -7433,11 +7433,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj"
+            "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj": {
+              "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj"
             },
-            "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Infrastructure\\Infrastructure.csproj"
+            "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -7495,7 +7495,7 @@
       "code": "NU1902",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"Microsoft.AspNetCore.Authentication.JwtBearer\" 5.0.1 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-q7cg-43mg-qp69",
+      "message": "Package 'Microsoft.AspNetCore.Authentication.JwtBearer' 5.0.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-q7cg-43mg-qp69",
       "libraryId": "Microsoft.AspNetCore.Authentication.JwtBearer",
       "targetGraphs": [
         "net5.0"
