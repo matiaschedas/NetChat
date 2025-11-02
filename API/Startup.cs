@@ -68,30 +68,16 @@ namespace API
                 x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
             });
             services.AddCors(opt => {
-                opt.AddPolicy("CorsPolicy", policyBuilder =>{
-                    // Lee los orígenes desde configuración o usa localhost por defecto
-                     var origins = Configuration["AllowedOrigins"];
+                opt.AddPolicy("CorsPolicy", policyBuilder =>
+                {
+                   var origins = Configuration["AllowedOrigins"].Split(',', StringSplitOptions.RemoveEmptyEntries)
+                        .Select(o => o.Trim()).ToArray();
 
-                    // Si se pone "*" en AllowedOrigins, usamos AllowAnyOrigin (sin credenciales).
-                    if (origins.Trim() == "*")
-                    {
-                        policyBuilder
-                            .AllowAnyHeader()
-                            .AllowAnyMethod()
-                            .AllowAnyOrigin(); // NO usar .AllowCredentials() si AllowAnyOrigin
-                    }
-                    else
-                    {
-                        var originArray = origins.Split(',', StringSplitOptions.RemoveEmptyEntries)
-                                                .Select(o => o.Trim())
-                                                .ToArray();
-
-                        policyBuilder
-                            .WithOrigins(originArray)
-                            .AllowAnyHeader()
-                            .AllowAnyMethod()
-                            .AllowCredentials(); // necesario si usás cookies o auth via websockets (SignalR)
-                    }
+                    policyBuilder
+                        .WithOrigins(origins)
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials();
                 });
             });
             services.AddMediatR(typeof(List.Handler).Assembly);
@@ -147,8 +133,8 @@ namespace API
                 app.UseHttpsRedirection();
                 app.UseHsts();
             }
-            app.UseRouting();
             app.UseCors("CorsPolicy");
+            app.UseRouting();
 
             app.UseAuthentication();
 
