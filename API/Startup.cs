@@ -70,14 +70,28 @@ namespace API
             services.AddCors(opt => {
                 opt.AddPolicy("CorsPolicy", policyBuilder =>
                 {
-                   var origins = Configuration["AllowedOrigins"].Split(',', StringSplitOptions.RemoveEmptyEntries)
-                        .Select(o => o.Trim()).ToArray();
+                    var originsConfig = Configuration["AllowedOrigins"] ?? "";
+                    var origins = originsConfig
+                        .Split(',', StringSplitOptions.RemoveEmptyEntries)
+                        .Select(o => o.Trim())
+                        .ToArray();
 
-                    policyBuilder
-                        .WithOrigins(origins)
-                        .AllowAnyHeader()
-                        .AllowAnyMethod()
-                        .AllowCredentials();
+                    if (origins.Length == 0 || origins.Contains("*"))
+                    {
+                        // No se permiten credenciales si el origen es wildcard
+                        policyBuilder
+                            .AllowAnyHeader()
+                            .AllowAnyMethod()
+                            .AllowAnyOrigin();
+                    }
+                    else
+                    {
+                        policyBuilder
+                            .WithOrigins(origins)
+                            .AllowAnyHeader()
+                            .AllowAnyMethod()
+                            .AllowCredentials();
+                    }
                 });
             });
             services.AddMediatR(typeof(List.Handler).Assembly);
