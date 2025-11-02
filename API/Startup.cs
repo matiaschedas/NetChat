@@ -44,7 +44,7 @@ namespace API
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services, IWebHostEnvironment env)
+        public void ConfigureServices(IServiceCollection services)
         {
 
             services
@@ -70,7 +70,6 @@ namespace API
             services.AddCors(opt => {
                 opt.AddPolicy("CorsPolicy", policyBuilder =>
                 {
-                                // Lista de orígenes permitidos desde configuración
                     var origins = (Configuration["AllowedOrigins"] ?? "")
                         .Split(',', StringSplitOptions.RemoveEmptyEntries)
                         .Select(o => o.Trim())
@@ -78,26 +77,14 @@ namespace API
 
                     if (origins.Length == 0)
                     {
-                    
-                        // Si no hay orígenes configurados, solo permitir localhost en desarrollo
-                        if (env.IsDevelopment())
-                        {
-                            policyBuilder
-                                .WithOrigins("http://localhost:3000", "http://localhost:4200") // ajusta según tu frontend
-                                .AllowAnyHeader()
-                                .AllowAnyMethod()
-                                .AllowCredentials();
-                        }
-                        else
-                        {
-                            // En producción no hay orígenes, bloquea
-                            throw new InvalidOperationException(
-                                "No AllowedOrigins configured. Cannot configure CORS.");
-                        }
+                        // En producción, si no hay orígenes, simplemente no permite nada
+                        policyBuilder
+                            .AllowAnyHeader()
+                            .AllowAnyMethod()
+                            .SetIsOriginAllowed(_ => false); // bloquea todos los orígenes
                     }
                     else
                     {
-                        // Siempre lista concreta de orígenes, permitido con credenciales
                         policyBuilder
                             .WithOrigins(origins)
                             .AllowAnyHeader()
