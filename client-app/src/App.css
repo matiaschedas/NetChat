@@ -1,0 +1,119 @@
+html,
+body,
+.app{
+  height: 100vh;
+  background: #eee;
+  padding: 1em;
+}
+
+.input__icon{
+  border-top-right-radius: 0 !important;
+  border-left-color: transparent !important;
+  border-bottom-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+}
+
+.button__icon{
+  border-top-right-radius: 0 !important;
+  font-size: 1em !important;
+  margin: 0 !important;
+}
+
+.message__self{
+  border-right: 2px solid orange !important;
+  padding: 8px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinea contenido a la derecha */
+  text-align: right;     /* Alinea texto a la derecha */
+  border-radius: 10px;
+  padding: 8px;
+  margin: 4px 0;
+}
+.message__self img {
+  width: 100%; /* Asegura que la imagen no se desborde */
+  max-width: 100%; /* Limita el tamaño máximo de la imagen */
+  margin-left: auto;
+
+}
+
+
+.message__image{
+  padding: 1em !important;
+}
+
+/* Typing.js - versión achicada */
+.user__typing {
+  font-style: italic;
+  font-weight: bold;
+  margin-right: 3px;
+  font-size: 0.75rem; /* un poco más pequeño */
+}
+
+.typing {
+  width: 3em;       /* más pequeño */
+  height: 1.2em;    /* más pequeño */
+  position: relative;
+  padding: 5px;     /* menos padding */
+  margin-left: 5px;
+  background: #e6e6e6;
+  border-radius: 15px; /* bordes un poco más pequeños */
+}
+
+.typing__dot {
+  float: left;
+  width: 5px;       /* puntos más pequeños */
+  height: 5px;
+  margin: 0 3px;
+  background: #8d8c91;
+  border-radius: 50%;
+  opacity: 0;
+  animation: loadingFade 1s infinite;
+}
+
+.typing__dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing__dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing__dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loadingFade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+body {
+  font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+}
+
+.color__container {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  width: 35px;
+  border-radius: 3px;
+}
+
+.color__square{
+  width: 35px;
+  height: 35px;
+}
+
+.color__overlay{
+  width: 85px;
+  height: 35px;
+  transform: rotate(225deg);
+}
