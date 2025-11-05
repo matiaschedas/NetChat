@@ -30,11 +30,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj": {
-                "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj"
+              "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj"
               },
-              "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -87,14 +87,14 @@
         }
       }
     },
-    "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj": {
+    "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\obj\\",
+        "outputPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "F:\\SDK VS Community 2022\\NuGetPackages"
@@ -113,8 +113,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
-                "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj"
+              "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj"
               },
               "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Persistence\\Persistence.csproj": {
                 "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Persistence\\Persistence.csproj"
@@ -179,14 +179,14 @@
         }
       }
     },
-    "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
+    "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "F:\\SDK VS Community 2022\\NuGetPackages"
@@ -248,14 +248,14 @@
         }
       }
     },
-    "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "F:\\SDK VS Community 2022\\NuGetPackages"
@@ -274,11 +274,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj": {
-                "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj"
+              "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Application\\Application.csproj"
               },
-              "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
-                "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj"
+              "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj"
               }
             }
           }
@@ -354,8 +354,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
-                "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj"
+              "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj"
               }
             }
           }

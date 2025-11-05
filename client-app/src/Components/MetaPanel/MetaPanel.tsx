@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite'
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Accordion, Header, Icon, List, Segment, Image } from 'semantic-ui-react'
 import { ChannelType } from '../../Models/channels'
 import { RootStoreContext } from '../../Stores/rootStore'
@@ -9,7 +9,17 @@ const MetaPanel = () => {
   const rootStore = useContext(RootStoreContext)
   const { activeChannel, isChannelLoaded } = rootStore.channelStore
   const { userPosts } = rootStore.messageStore
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // detecta pantalla chica
   
+  // Detecta cambio de tamaño de pantalla
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 768);
+      };
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
   const setCurrentIndex = (event: any, props: any) => {
     const { index } = props
     const newIndex = activeIndex === index ? -1 : index

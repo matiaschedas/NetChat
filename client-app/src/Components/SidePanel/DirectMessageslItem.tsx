@@ -1,14 +1,16 @@
-import React from 'react'
-import { Icon, Menu, Popup} from 'semantic-ui-react'
+import React, { useContext } from 'react'
+import { Icon, Label, Menu, Popup} from 'semantic-ui-react'
+import { IChannel } from '../../Models/channels'
 import { IUser } from '../../Models/users'
+import { RootStoreContext } from '../../Stores/rootStore';
 
 interface IProps {
   user: IUser,
-  changeChannel: (user: IUser) => void
+  changeChannel: (user: IUser) => void,
   active: boolean
 }
 
-const DirectMessagesItem: React.FC<IProps>= ({ user, changeChannel, active }) => {
+const DirectMessagesItem: React.FC<IProps>= ({ user, changeChannel, active}) => {
 
   const isUserOnline = (user: IUser) => {
     return user.isOnline

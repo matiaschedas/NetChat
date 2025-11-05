@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Button, Divider, Icon, Label, Menu, Modal, Segment, Sidebar } from 'semantic-ui-react'
 import { SliderPicker } from 'react-color'
 import { RootStoreContext } from '../../Stores/rootStore'
@@ -20,6 +20,7 @@ const ColorPanel = () => {
     secondary: '',
   }
   const [state, setState] = useState<IState>(initialState)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // detecta pantalla chica
   const openModal = () => setState({ modal: true })
   const closeModal = () => setState({ modal:false })
   const { modal, primary, secondary } = state
@@ -39,6 +40,16 @@ const ColorPanel = () => {
       closeModal()
     }
   }
+
+    // Detecta cambio de tamaño de pantalla
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const displayUserColors = (user: IUser | null) => {
     if(user === null) return
     return (
@@ -52,6 +63,7 @@ const ColorPanel = () => {
       </React.Fragment>
     )
   } 
+  if (isMobile) return null;
   return (
     <Sidebar as={Menu} icon="labeled" inverted vertical visible width="very thin">
       <Divider />

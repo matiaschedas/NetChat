@@ -129,6 +129,8 @@ export default class MessageStore
   }
   @action countUserPosts = (messages: IMessage[] | undefined) => {
     let userPosts = messages?.reduce((acc: any, message) => {
+      const sender = message.sender;
+      if (!sender || !sender.userName) return acc;
       if(message.sender.userName in acc) {
         acc[message.sender.userName].count += 1
       } else{

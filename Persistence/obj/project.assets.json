@@ -6612,8 +6612,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
-              "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj"
+            "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj"
             }
           }
         }

@@ -89,14 +89,24 @@ const Messages = () => {
     setCurrentUser()
   }, [])
 
+  function parseUTC(dateString: string) {
+    // Convierte cualquier fecha a UTC, ignorando la zona local
+    return new Date(new Date(dateString).toISOString());
+  }
+
   const displayMessages = (messages: IMessage[]) => {
     //console.log(messages.map(m => ({ createdAt: m.createdAt, type: typeof m.createdAt, isDate: m.createdAt instanceof Date })));
-    const sortedMessages = [...messages].sort((a,b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime())
+    /*console.log("mensajes ",messages.map(m => ({
+        id: m.id,
+        createdAt: m.createdAt
+      })))*/
+    const sortedMessages = [...messages].sort(
+  (a, b) => parseUTC(a.createdAt.toString()).getTime() - parseUTC(b.createdAt.toString()).getTime())
     const filteredMessages = sortedMessages.filter(m => m.channelId === getCurrentChannel().id)
     return (filteredMessages.length > 0 && filteredMessages.map((message, index) => { 
       const previousMessage = index > 0 ? filteredMessages[index - 1] : null
       return(
-              <Message message={message} key={message.id} currentUser={user} previousMessage={previousMessage} />
+              <Message message={message} key={message.id + '-' + index} currentUser={user} previousMessage={previousMessage} />
             )
     }))
   }
@@ -263,10 +273,10 @@ const Messages = () => {
         <div>Cargando Usuario...</div>
       ): (
       <div style={{ position: 'relative' }}>
-        <div ref={messagesContainerRef}  style={{   maxHeight: '70vh',
+        <div ref={messagesContainerRef}  style={{   maxHeight: '65vh',
                                                     overflowY: 'auto', 
                                                 }}>
-          <Segment>
+          <Segment >
               <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
                 {charginPreviousMessages ? <Button size="small" onClick={handleLoadMoreMessages} loading={charginPreviousMessages}>
                   Charge previous messages

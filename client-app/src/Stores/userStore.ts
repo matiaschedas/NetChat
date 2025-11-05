@@ -60,14 +60,20 @@ export default class UserStore {
   @action logout = async (id: string) => {
     try{
       await agent.User.logout(id)
-      debugger
       const connection = this.rootStore.commonStore.hubConnection
-      if (!connection) throw new Error("Hub connection is not established userStore")
-      await connection.invoke('Logout', id)
-      
+       if (connection) {
+        try {
+          await connection.invoke('Logout', id);
+        } catch (err) {
+          console.log('Error invoking logout on hub', err);
+        }
+      }
+      await this.rootStore.commonStore.stopHubConnection();
+
       runInAction(() => {
         this.rootStore.commonStore.setToken(null)
         this.user = null
+        window.localStorage.removeItem('jwt');
         this.navigate?.("/login");
       });
     }

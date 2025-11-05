@@ -4,6 +4,9 @@ import { IUser, IUserAppColors, IUserFormValues } from '../Models/users'
 import { IMediaFormValues, IMessage, IMessageFormValues } from '../Models/messages'
 
 //axios.defaults.baseURL = 'http://localhost:5000/api'
+//https://netchat-xv5f.onrender.com/api
+//https://-xv5f.onrender.com/api
+
 axios.defaults.baseURL = 'https://netchat-xv5f.onrender.com/api'
 //interceptar la request antes de mandarla al back, en este caso para agregarle el token de authenticacion
 axios.interceptors.request.use((config) => {

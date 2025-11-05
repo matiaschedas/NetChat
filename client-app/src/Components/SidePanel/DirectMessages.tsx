@@ -2,7 +2,7 @@ import { toJS } from 'mobx';
 import { observer } from 'mobx-react-lite';
 import React, { useContext, useEffect } from 'react'
 import { Icon, Loader, Menu } from 'semantic-ui-react'
-import { ChannelType } from '../../Models/channels';
+import { ChannelType, IChannel } from '../../Models/channels';
 import { IUser } from '../../Models/users';
 import { RootStoreContext } from '../../Stores/rootStore';
 import DirectMessagesItem from './DirectMessageslItem'
@@ -13,7 +13,7 @@ const DirectMessages = () => {
   const messageStore = rootStore.messageStore
   const userStore = rootStore.userStore
   const commonStore = rootStore.commonStore
-  const { changePrivateChannel, getCurrentChannel } = channelStore
+  const { changePrivateChannel, getCurrentChannel, channelNotification, cleanNotification, channels, getPrivateChannel} = channelStore
   const { loadMessages } = messageStore
   const { setSelectedChannelType, selectedChannelType, selectedChannelId, setSelectedChannelId} = commonStore
 
@@ -39,6 +39,8 @@ const DirectMessages = () => {
       ))
     )
   }
+
+
   useEffect(() => {
     loadUsers()
   },[loadUsers, changePrivateChannel])

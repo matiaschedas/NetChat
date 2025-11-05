@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {}
+    "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
+    "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\matia\\source\\repos\\Curso Net\\NetChat_3\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "F:\\SDK VS Community 2022\\NuGetPackages"

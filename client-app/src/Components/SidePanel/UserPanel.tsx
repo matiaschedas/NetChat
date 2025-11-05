@@ -56,6 +56,8 @@ const UserPanel = () => {
           </Dropdown>) :(
           <Message>
             Don't you have an account? <Link to="/register">Register</Link>
+            <br />
+            Already have an account? <Link to="/login">Login</Link>
           </Message>)}
         </Header>
       </Grid.Column>

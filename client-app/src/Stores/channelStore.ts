@@ -193,6 +193,27 @@ export default class ChannelStore {
     this.errorStatus = null
     this.errorMessage = ''
   }
+  @action getPrivateChannel = async (userId: string) => {
+    try{
+      let privateChannel = await agent.Channels.privateChannel(userId)
+      return privateChannel
+    }
+     catch(err){
+      console.log("error en getPrivateChannel")
+      console.log(err)
+      if (!axios.isAxiosError(err)) {
+        runInAction(() => {
+          toast.error('Ocurrió un error inesperado');
+        });
+      } 
+      const axiosError = err as AxiosError;
+      if (axiosError.response?.status===401)
+      {
+        this.navigate?.('/login')
+      }
+      else throw err
+    }
+  }
   @action changePrivateChannel = async (userId: string) => {
     try{
       let currentChannel = await agent.Channels.privateChannel(userId)

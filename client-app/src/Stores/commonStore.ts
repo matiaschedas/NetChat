@@ -45,7 +45,8 @@ export default class CommonStore{
     await this.createHubConnection(); // Crear nueva conexión
   
   }
-
+ //https://netchat-xv5f.onrender.com/chat
+ //http://localhost:5000/chat
   @action createHubConnection = async () => {
     if(this.hubConnection) return;
     this.hubConnection = new HubConnectionBuilder()
@@ -58,12 +59,44 @@ export default class CommonStore{
     //this.hubConnection.start().catch((error) => console.log("Error establishing connection", error))
 
     this.hubConnection.on('ReceiveMessage', (message: IMessage) => {
-      runInAction(() => {
+      runInAction(() => {/*
        // this.messages.push(message)
         this.rootStore.messageStore.messages = [...this.rootStore.messageStore.messages, message]
-        this.rootStore.channelStore.addNotification(message.channelId, message)
-      })
-    })
+        this.rootStore.channelStore.addNotification(message.channelId, message)*/
+
+        function parseUTC(date: string | Date) {
+            if (date instanceof Date) return date;
+            // Crea un Date usando la fecha UTC exacta, sin convertir a local
+            const d = new Date(date);
+            return new Date(d.getTime() + d.getTimezoneOffset() * 60000);
+        }
+       if (!message.createdAt) return; // ignorar mensajes sin fecha
+
+    // Normalizar el mensaje entrante
+        const normalized: IMessage = {
+          ...message,
+          createdAt: parseUTC(message.createdAt)
+        };
+    // Normalizar todos los mensajes existentes
+       const messages = this.rootStore.messageStore.messages.map(m => ({
+          ...m,
+          createdAt: m.createdAt instanceof Date 
+            ? m.createdAt 
+            : new Date(m.createdAt)
+        }));
+    // Agregar el mensaje nuevo
+    messages.push(normalized);
+
+    // Ordenar por fecha
+    messages.sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
+
+    // Actualizar MobX
+    this.rootStore.messageStore.messages = messages;
+
+    // Notificación
+    this.rootStore.channelStore.addNotification(message.channelId, message);
+    });
+  });
     this.hubConnection.on('UserLogged', (user: IUser) => {
       runInAction(() => {
         const index = this.rootStore.userStore.users.findIndex(u => u.id === user.id)

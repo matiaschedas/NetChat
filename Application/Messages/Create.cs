@@ -42,8 +42,9 @@ namespace Application.Messages
         public async Task<MessageDto> Handle(Command request, CancellationToken cancellationToken)
         {
            var user = await context.Users.SingleOrDefaultAsync(x => x.UserName == userAccessor.GetCurrentUserName());
+           if (user == null) throw new RestException(HttpStatusCode.Unauthorized, new { user = "User not authorized" });
+            
            var channel = await context.Channels.SingleOrDefaultAsync(x => x.Id == request.ChannelId);
-
            if(channel == null) throw new RestException(HttpStatusCode.NotFound, new { channel = "Channel not found" });
 
            var message = new Message

@@ -5,7 +5,7 @@ import { v4 as uuid } from 'uuid'
 import { RootStoreContext } from '../../Stores/rootStore'
 import { observer } from 'mobx-react-lite'
 import { useNavigate } from 'react-router-dom'
-
+import { toast } from 'react-toastify';
 
 const ChannelForm: React.FC = () => {
   const initialChannel = {
@@ -28,9 +28,14 @@ const ChannelForm: React.FC = () => {
   },[navigate, setNavigate])
 
   const handleSubmit = () => {
+     if (channel.name.trim() === '') {
+      toast.error('Channel name is required!');
+      return;
+    }
     let newChannel = {
       ...channel,
-      id: uuid()
+      id: uuid(),
+      description: channel.description.trim() === '' ? 'No description provided' : channel.description
     }
     createChannel(newChannel)
     setChannel(initialChannel)

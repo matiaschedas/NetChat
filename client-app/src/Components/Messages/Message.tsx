@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { IMessage, MessageType } from '../../Models/messages'
 import { Comment, CommentAuthor, CommentAvatar, CommentContent, CommentMetadata, CommentText, Image} from 'semantic-ui-react'
-import moment from 'moment'
+import moment from 'moment-timezone'
 import { observer } from 'mobx-react-lite'
 import { RootStoreContext } from '../../Stores/rootStore'
 import { IUser } from '../../Models/users'
@@ -38,7 +38,7 @@ const Message : React.FC<IProps> = ({ message, currentUser, previousMessage }) =
         <>
           { (previousMessage && previousMessage?.sender.email !== message.sender.email) && <CommentAuthor as="a">Yo</CommentAuthor>}
           { !previousMessage && <CommentAuthor as="a">Yo</CommentAuthor>}
-          <CommentMetadata>{moment(message.createdAt).fromNow()}</CommentMetadata>
+          <CommentMetadata>{moment(message.createdAt + 'Z').fromNow()}</CommentMetadata>
           {message.messageType === MessageType.Text && (
             <CommentText>{message.content}</CommentText>
           )}
