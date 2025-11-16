@@ -17,21 +17,11 @@ namespace Persistence
                         Id= "1",
                         UserName= "Rodrigo",
                         Email="rodrigo@test.com"
-                    },
-                    new AppUser{
-                        Id= "2",
-                        UserName= "Matias",
-                        Email="matias@test.com"
-                    },
-                    new AppUser{
-                        Id= "3",
-                        UserName= "Tomas",
-                        Email="tomas@test.com"
                     }
                 };
 
                 foreach(var user in users){
-                    await userManager.CreateAsync(user, "Sadewq123@");
+                    await userManager.CreateAsync(user, "Test123@");
                 }
             }
 

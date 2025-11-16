@@ -1,7 +1,7 @@
 html,
 body,
 .app {
-  height: 100vh;
+  height: 100dvh;
   background: #eee;
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@ body,
 }
 
 .ui.grid.app {
-  height: 100vh;
+  height: 100dvh;
   padding: 10px; /* espacio interno del layout */
   box-sizing: border-box;
 }
@@ -136,3 +136,4 @@ body {
 .ui.modal {
   z-index: 4002 !important;
 }
+

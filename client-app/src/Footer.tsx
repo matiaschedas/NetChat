@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
     >
       <Container>
         <p style={{ marginBottom: '0.3em' }}>
-          © {new Date().getFullYear()} Matias Chedas — All rights reserved.
+          © {new Date().getFullYear()} NetChat — All rights reserved.
         </p>
         <div>
           <a href="https://github.com/matiaschedas" target="_blank" rel="noopener noreferrer">

@@ -10,6 +10,8 @@ import { RootStoreContext } from '../../Stores/rootStore'
 import { FORM_ERROR } from 'final-form'
 import TextInput from '../Common/Form/TextInput'
 import Footer from '../../Footer'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Register = () => {
@@ -35,6 +37,7 @@ const Register = () => {
 
   return (
     <>
+     <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} />
       <Grid textAlign='center' verticalAlign='middle' className='app'>
         <Grid.Column style={{ maxWidth: 450 }}>
           <Header as="h1" icon color="orange" textAlign='center'>

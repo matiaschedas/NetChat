@@ -1,19 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Header, Icon, Segment } from 'semantic-ui-react'
 import { ChannelType, IChannel } from '../../Models/channels'
 import { IUser } from '../../Models/users'
 import SearchInput from './SearchInput'
-
 
 interface IProps {
   currentChannel: IChannel | null,
   currentUser: IUser | null,
   handleStar: () => void,
   handleSearchChange: (event: any) => void,
-  numUniqueUsers: number
+  numUniqueUsers: number,
+  isMobile: boolean
 }
 
-const MessagesHeader : React.FC<IProps> = ({ currentChannel, currentUser, handleStar, handleSearchChange, numUniqueUsers }) => {
+const MessagesHeader : React.FC<IProps> = ({ currentChannel, currentUser, handleStar, handleSearchChange, numUniqueUsers, isMobile }) => {
   const isPrivateChannel = () => {
     return currentChannel?.channelType === ChannelType.Room
   }
@@ -38,7 +38,7 @@ const MessagesHeader : React.FC<IProps> = ({ currentChannel, currentUser, handle
   return (
     <Segment clearing>
       <Header fluid="true" as="h2" floated="left" style={{ marginBottom: 0 }}>
-        <span>
+        <span style={{ paddingLeft: isMobile ? '50px' : '0' }}>
           {channelDisplayName()}
           {(isPrivateChannel()===false || isChannelStarred===true) && <Icon name={isChannelStarred ? 'star' : 'star outline'} color={isChannelStarred ? 'yellow': 'black'} onClick={handleStar} />}
         </span>

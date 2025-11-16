@@ -72,7 +72,7 @@ const Channels = () =>  {
           {displayChannels(channels)}
         </Menu.Menu>
 
-      <ChannelForm /> 
+     
 
       </React.Fragment>
 

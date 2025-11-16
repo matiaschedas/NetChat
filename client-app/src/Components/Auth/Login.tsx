@@ -9,6 +9,8 @@ import { FORM_ERROR } from 'final-form'
 import { combineValidators, isRequired } from 'revalidate'
 import { isReaction } from 'mobx/dist/internal'
 import Footer from '../../Footer'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   
@@ -21,7 +23,6 @@ const Login = () => {
   const navigate = useNavigate()
   const { login, setNavigate } = rootStore.userStore
   const handleSubmitForm = async (values: IUserFormValues) => {
-    console.log('Submit login form with:', values);
     return login(values).catch((error) => ( {[FORM_ERROR]: error }))
   } 
   const { createHubConnection, stopHubConnection } = rootStore.commonStore
@@ -40,6 +41,7 @@ const Login = () => {
 
   return (
     <>
+     <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} />
       <Grid textAlign='center' verticalAlign='middle' className='app'>
         <Grid.Column style={{ maxWidth: 450 }}>
           <Header as="h1" icon color="violet" textAlign='center'>

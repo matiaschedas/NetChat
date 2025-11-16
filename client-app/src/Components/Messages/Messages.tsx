@@ -17,7 +17,11 @@ interface ISearchFormState {
   searchLoading: boolean
 }
 
-const Messages = () => {
+interface IProps {
+  isMobile: boolean
+}
+
+const Messages: React.FC<IProps> = ({ isMobile }) => {
   const searchFormInitialState: ISearchFormState = {
     searchTerm: '',
     searchLoading: false
@@ -268,7 +272,7 @@ const Messages = () => {
 
   return (
     <React.Fragment>
-      <MessagesHeader numUniqueUsers={numUniqueUsers} handleSearchChange={handleSearchChange} currentChannel={getCurrentChannel()} currentUser={user} handleStar={handleStar}/>
+      <MessagesHeader isMobile={isMobile} numUniqueUsers={numUniqueUsers} handleSearchChange={handleSearchChange} currentChannel={getCurrentChannel()} currentUser={user} handleStar={handleStar}/>
       {!user ? (
         <div>Cargando Usuario...</div>
       ): (
@@ -282,7 +286,7 @@ const Messages = () => {
                   Charge previous messages
                 </Button> : messageStore.noMorePreviousMessages && <span>No more previous messages</span>}
               </div>
-              <CommentGroup size='large' className="messages"  style={{ width: '100%'  }}>
+              <CommentGroup size='large' className="messages"   style={{ width: '100%', maxWidth: 'none' }}>
                 {/* Botón para cargar mensajes anteriores */}
                 {displayMessages(messageState.length > 0 ? messageState : messages)}
                 {hayTypings(typingsNotifications) && <div style={{ display: 'flex', alignItems: 'center' }}> <>{diplayTypingsAvatars(typingsNotifications)} <Typing/></></div>}

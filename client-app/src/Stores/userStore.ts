@@ -5,6 +5,8 @@ import { RootStore } from "./rootStore";
 import md5 from 'md5';
 import { HubConnection } from "@aspnet/signalr";
 import axios, { AxiosError, HttpStatusCode } from "axios"
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default class UserStore {
   @observable user: IUser | null = null
@@ -54,6 +56,12 @@ export default class UserStore {
     {
       console.log("error en login")
       console.log(err)
+      // Mostrar toast de error
+      if (axios.isAxiosError(err) && err.response?.status === 401) {
+        toast.error('Usuario o contraseña incorrectos');
+      } else {
+        toast.error('Ocurrió un error al intentar iniciar sesión');
+      }
       throw err
     }
   }
@@ -111,12 +119,25 @@ export default class UserStore {
           console.log('Ocurrió un error inesperado');
         });
       } 
-      const axiosError = err as AxiosError;
-      if (axiosError.response?.status===401)
-      {
-        this.navigate?.('/login')
+      const axiosError = err as AxiosError<any>;
+      if (axiosError.response?.status === 400 && axiosError.response.data?.errors) {
+         const errors = axiosError.response.data.errors;
+
+        // Convertir las listas de errores en un único string
+        const mensajes = Object.entries(errors)
+          .map(([campo, mensajes]) => `${campo}: ${(mensajes as string[]).join(", ")}`)
+          .join("\n");
+
+        toast.error(mensajes, {
+          autoClose: 7000,
+          style: { whiteSpace: "pre-line" }, // para mostrar saltos de línea
+        });
+        return;
       }
-      else throw err
+      else {
+      // Error inesperado (no Axios)
+        toast.error('Ocurrió un error inesperado.');
+      }
     }
   }
   @action setCurrentUser = async() => {
